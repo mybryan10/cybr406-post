@@ -74,7 +74,7 @@ class PostHomework01Tests {
 				.addHeader("content-type", "application/json")
 				.setResponseCode(200));
 
-		// Simulate a user with a good username and password trying ot create a new post.
+		// Simulate a user with a good username and password trying to create a new post.
 		Map<String, Object> post = new HashMap<>();
 		post.put("text", "Test Post");
 		mockMvc.perform(post("/posts")
@@ -89,7 +89,7 @@ class PostHomework01Tests {
 		mockWebServer.enqueue(new MockResponse()
 				.setResponseCode(400));
 
-		// Simulate a user with a bad username and password trying ot create a new post.
+		// Simulate a user with a bad username and password trying to create a new post.
 		Map<String, Object> post = new HashMap<>();
 		post.put("text", "Test Post");
 		mockMvc.perform(post("/posts")
